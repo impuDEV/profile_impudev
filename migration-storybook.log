@@ -1,0 +1,202 @@
+🔎 checking possible migrations..
+
+🔎 found a 'new-frameworks' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                   │
+│   We've detected your project is not fully setup with the new framework format, which was introduced in Storybook 7.                                                              │
+│                                                                                                                                                                                   │
+│   Storybook 7 introduced the concept of frameworks, which abstracts configuration for renderers (e.g. React, Vue), builders (e.g. Webpack, Vite) and defaults to make             │
+│   integrations easier.                                                                                                                                                            │
+│                                                                                                                                                                                   │
+│   Your project should be updated to use Storybook's framework: @storybook/react-webpack5. We can attempt to do this for you automatically.                                        │
+│                                                                                                                                                                                   │
+│   Here are the steps this migration will do to migrate your project:                                                                                                              │
+│   - Remove the following dependencies:                                                                                                                                            │
+│   - * @storybook/builder-webpack5                                                                                                                                                 │
+│   - * @storybook/manager-webpack5                                                                                                                                                 │
+│   - Add the following dependencies:                                                                                                                                               │
+│   - * @storybook/react-webpack5                                                                                                                                                   │
+│   - Remove the core.builder field in config\storybook\main.ts.                                                                                                                    │
+│                                                                                                                                                                                   │
+│                                                                                                                                                                                   │
+│   To learn more about the new framework format, see: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#new-framework-api                                            │
+│                                                                                                                                                                                   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'new-frameworks' migration on your project? » (Y/n)√ Do you want to run the 'new-frameworks' migration on your project? ... yes
+✅ Removing dependencies: @storybook/builder-webpack5, @storybook/manager-webpack5
+✅ Installing new dependencies: @storybook/react-webpack5
+
+An error occurred while installing dependencies:
+NPM error ETARGET - Package target not found.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+❌ error when running new-frameworks migration
+HandledError: Error: NPM error ETARGET - Package target not found.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+    at NPMProxy.addDependencies (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\node_modules\@storybook\core-common\dist\index.js:33:75)
+    at async Object.run (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:347:755)
+    ... 3 lines matching cause stack trace ...
+    at async Command.<anonymous> (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:670:2876) {
+  handled: true,
+  cause: Error: NPM error ETARGET - Package target not found.
+  
+  Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+      at NPMProxy.runAddDeps (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\node_modules\@storybook\core-common\dist\index.js:35:5643)
+      at async NPMProxy.addDependencies (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\node_modules\@storybook\core-common\dist\index.js:32:927)
+      at async Object.run (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:347:755)
+      at async runFixes (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:604:1794)
+      at async automigrate (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:602:1629)
+      at async doAutomigrate (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:602:651)
+      at async Command.<anonymous> (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:670:2876)
+}
+
+
+🔎 found a 'webpack5' migration:
+╭ Automigration detected ────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                        │
+│   We've detected you're running webpack 5.69.1.                                                        │
+│   Your Storybook's main.js files specifies webpack4, which is incompatible.                            │
+│                                                                                                        │
+│   To run Storybook in webpack5-mode, we can install Storybook's @storybook/builder-webpack5 for you.   │
+│                                                                                                        │
+│   More info: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#webpack-5-manager-build   │
+│                                                                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'webpack5' migration on your project? » (Y/n)√ Do you want to run the 'webpack5' migration on your project? ... yes
+✅ Adding dependencies: @storybook/builder-webpack5@6.5.16
+✅ Setting `core.builder` to `@storybook/builder-webpack5` in main.js
+✅ ran webpack5 migration
+
+🔎 found a 'remove-jest-testing-library' migration:
+╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                              │
+│   Attention: We've detected that you're using the following packages which are known to be incompatible since Storybook 8:   │
+│                                                                                                                              │
+│   - @storybook/testing-library                                                                                               │
+│                                                                                                                              │
+│   We will uninstall them for you and install @storybook/test instead.                                                        │
+│                                                                                                                              │
+│   Also, we can help you migrate your stories to use the new package.                                                         │
+│                                                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'remove-jest-testing-library' migration on your project? » (Y/n)√ Do you want to run the 'remove-jest-testing-library' migration on your project? ... no
+
+🔎 found a 'remove-argtypes-regex' migration:
+╭ Manual migration detected ────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                               │
+│   Attention: We've detected that you're using argTypesRegex:                                                  │
+│                                                                                                               │
+│   config\storybook\preview.js                                                                                 │
+│      7 |                                                                                                      │
+│      8 | export const parameters = {                                                                          │
+│   >  9 | 	actions: { argTypesRegex: '^on[A-Z].*' },                                                            │
+│        | 	              ^^^^^^^^^^^^^                                                                          │
+│     10 | 	controls: {                                                                                          │
+│     11 | 		matchers: {                                                                                          │
+│     12 | 			color: /(background|color)$/i,                                                                       │
+│                                                                                                               │
+│   In Storybook you can write so-called play functions, which are used to render your stories interactively.   │
+│   Mocking action args in play functions was done implicitly by analyzing the argTypesRegex.                   │
+│                                                                                                               │
+│   Since Storybook 8, implicit action args mocking isn't supported anymore.                                    │
+│                                                                                                               │
+│   Use the following command to check for mocked action usages in your play functions:                         │
+│   npx storybook migrate find-implicit-spies --glob="**/*.stories.@(js|jsx|ts|tsx)"                            │
+│                                                                                                               │
+│   And follow the documentation to migrate your play functions:                                                │
+│   https://storybook.js.org/docs/8.0/essentials/actions#via-storybooktest-fn-spy-function                      │
+│                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+? Select continue once you have made the required changes, or quit to exit the migration process » quit / continue√ Select continue once you have made the required changes, or quit to exit the migration process ... quit / continue
+
+🔎 found a 'removedglobalclientapis' migration:
+╭ Manual migration detected ───────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   Attention: We could not automatically make this change. You'll need to do it manually.         │
+│                                                                                                  │
+│   The following APIs (used in "config\storybook\preview.js") have been removed from Storybook:   │
+│                                                                                                  │
+│   - addDecorator                                                                                 │
+│                                                                                                  │
+│   Please see the migration guide for more information:                                           │
+│   https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#removed-global-client-apis     │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+? Select continue once you have made the required changes, or quit to exit the migration process » quit / continue√ Select continue once you have made the required changes, or quit to exit the migration process ... quit / continue
+
+🔎 found a 'webpack5-compiler-setup' migration:
+╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                  │
+│   Storybook's Webpack5 builder is now compiler agnostic, meaning you can choose a compiler addon that best fits your project:                                    │
+│                                                                                                                                                                  │
+│     - Babel: A vast ecosystem and is battle-tested. It's a robust choice if you have an extensive Babel setup or need specific Babel plugins for your project.   │
+│     - SWC:  Fast and easy to configure. Ideal if you want faster builds and have a straightforward configuration without the need for Babel's extensibility.     │
+│                                                                                                                                                                  │
+│   In the next step, Storybook will ask you to choose a compiler to automatically set it up for you.                                                              │
+│                                                                                                                                                                  │
+│   After the migration, you can switch Webpack5 compilers by swapping the addon in your project.                                                                  │
+│   You can find more information here: https://storybook.js.org/docs/8.0/builders/webpack#compiler-support                                                        │
+│                                                                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'webpack5-compiler-setup' migration on your project? » (Y/n)√ Do you want to run the 'webpack5-compiler-setup' migration on your project? ... yes
+? Which compiler would you like to use? » - Use arrow-keys. Return to submit.
+>   Babel - Choose Babel for a vast ecosystem and battle-tested reliability.
+    SWC
+√ Which compiler would you like to use? » Babel
+Verifying @storybook/addon-webpack5-compiler-babel
+Installing @storybook/addon-webpack5-compiler-babel@^3.0.3
+Adding '@storybook/addon-webpack5-compiler-babel' to main.js addons field.
+✅ ran webpack5-compiler-setup migration
+
+🔎 found a 'visual-tests-addon' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                   │
+│   New to Storybook 8: Storybook's Visual Tests addon helps you catch unintentional changes/bugs in your stories. The addon is powered by Chromatic, a cloud-based testing tool    │
+│   developed by Storybook's core team.                                                                                                                                             │
+│                                                                                                                                                                                   │
+│   Learn more: storybook.js.org/docs/writing-tests/visual-testing                                                                                                                  │
+│                                                                                                                                                                                   │
+│   Install Visual Tests addon in your project?                                                                                                                                     │
+│                                                                                                                                                                                   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'visual-tests-addon' migration on your project? » (Y/n)√ Do you want to run the 'visual-tests-addon' migration on your project? ... yes
+✅ Adding "@chromatic-com/storybook" addon
+✅ ran visual-tests-addon migration
+
+╭ Migration check ran with failures ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                               │
+│   Successful migrations:                                                                                                                                      │
+│                                                                                                                                                               │
+│   webpack5, webpack5-compiler-setup, visual-tests-addon                                                                                                       │
+│                                                                                                                                                               │
+│   Failed migrations:                                                                                                                                          │
+│                                                                                                                                                               │
+│   new-frameworks:                                                                                                                                             │
+│   Error: NPM error ETARGET - Package target not found.                                                                                                        │
+│                                                                                                                                                               │
+│   Please check the logfile generated at ./storybook.log for troubleshooting and try again.                                                                    │
+│                                                                                                                                                               │
+│   You can find the full logs in C:\1Content\DEV\react-projs\react-complexapp-template\migration-storybook.log                                                 │
+│                                                                                                                                                               │
+│   Manual migrations:                                                                                                                                          │
+│                                                                                                                                                               │
+│   remove-argtypes-regex, removedglobalclientapis                                                                                                              │
+│                                                                                                                                                               │
+│   Skipped migrations:                                                                                                                                         │
+│                                                                                                                                                               │
+│   remove-jest-testing-library                                                                                                                                 │
+│                                                                                                                                                               │
+│   ─────────────────────────────────────────────────                                                                                                           │
+│                                                                                                                                                               │
+│   If you'd like to run the migrations again, you can do so by running 'npx storybook automigrate'                                                             │
+│                                                                                                                                                               │
+│   The automigrations try to migrate common patterns in your project, but might not contain everything needed to migrate to the latest version of Storybook.   │
+│                                                                                                                                                               │
+│   Please check the changelog and migration guide for manual migrations and more information: https://storybook.js.org/docs/8.0/migration-guide                │
+│   And reach out on Discord if you need help: https://discord.gg/storybook                                                                                     │
+│                                                                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+

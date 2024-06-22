@@ -1,0 +1,116 @@
+npm WARN ERESOLVE overriding peer dependency
+npm WARN While resolving: react-inspector@5.1.1
+npm WARN Found: react@18.3.1
+npm WARN node_modules/react
+npm WARN   peer react@">= 16.8.6" from @design-systems/utils@2.12.0
+npm WARN   node_modules/@design-systems/utils
+npm WARN     @design-systems/utils@"2.12.0" from @devtools-ds/themes@1.2.1
+npm WARN     node_modules/@devtools-ds/themes
+npm WARN   63 more (@devtools-ds/object-inspector, @devtools-ds/themes, ...)
+npm WARN 
+npm WARN Could not resolve dependency:
+npm WARN peer react@"^16.8.4 || ^17.0.0" from react-inspector@5.1.1
+npm WARN node_modules/@storybook/addon-actions/node_modules/react-inspector
+npm WARN   react-inspector@"^5.1.0" from @storybook/addon-actions@6.5.16
+npm WARN   node_modules/@storybook/addon-actions
+npm WARN 
+npm WARN Conflicting peer dependency: react@17.0.2
+npm WARN node_modules/react
+npm WARN   peer react@"^16.8.4 || ^17.0.0" from react-inspector@5.1.1
+npm WARN   node_modules/@storybook/addon-actions/node_modules/react-inspector
+npm WARN     react-inspector@"^5.1.0" from @storybook/addon-actions@6.5.16
+npm WARN     node_modules/@storybook/addon-actions
+npm WARN ERESOLVE overriding peer dependency
+npm WARN While resolving: @mdx-js/react@1.6.22
+npm WARN Found: react@18.3.1
+npm WARN node_modules/react
+npm WARN   peer react@">= 16.8.6" from @design-systems/utils@2.12.0
+npm WARN   node_modules/@design-systems/utils
+npm WARN     @design-systems/utils@"2.12.0" from @devtools-ds/themes@1.2.1
+npm WARN     node_modules/@devtools-ds/themes
+npm WARN   63 more (@devtools-ds/object-inspector, @devtools-ds/themes, ...)
+npm WARN 
+npm WARN Could not resolve dependency:
+npm WARN peer react@"^16.13.1 || ^17.0.0" from @mdx-js/react@1.6.22
+npm WARN node_modules/@storybook/addon-docs/node_modules/@mdx-js/react
+npm WARN   @mdx-js/react@"^1.6.22" from @storybook/addon-docs@6.5.16
+npm WARN   node_modules/@storybook/addon-docs
+npm WARN 
+npm WARN Conflicting peer dependency: react@17.0.2
+npm WARN node_modules/react
+npm WARN   peer react@"^16.13.1 || ^17.0.0" from @mdx-js/react@1.6.22
+npm WARN   node_modules/@storybook/addon-docs/node_modules/@mdx-js/react
+npm WARN     @mdx-js/react@"^1.6.22" from @storybook/addon-docs@6.5.16
+npm WARN     node_modules/@storybook/addon-docs
+npm WARN ERESOLVE overriding peer dependency
+npm WARN While resolving: react-element-to-jsx-string@14.3.4
+npm WARN Found: react@18.3.1
+npm WARN node_modules/react
+npm WARN   peer react@">= 16.8.6" from @design-systems/utils@2.12.0
+npm WARN   node_modules/@design-systems/utils
+npm WARN     @design-systems/utils@"2.12.0" from @devtools-ds/themes@1.2.1
+npm WARN     node_modules/@devtools-ds/themes
+npm WARN   63 more (@devtools-ds/object-inspector, @devtools-ds/themes, ...)
+npm WARN 
+npm WARN Could not resolve dependency:
+npm WARN peer react@"^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1" from react-element-to-jsx-string@14.3.4
+npm WARN node_modules/@storybook/react/node_modules/react-element-to-jsx-string
+npm WARN   react-element-to-jsx-string@"^14.3.4" from @storybook/react@6.5.16
+npm WARN   node_modules/@storybook/react
+npm WARN 
+npm WARN Conflicting peer dependency: react@17.0.2
+npm WARN node_modules/react
+npm WARN   peer react@"^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1" from react-element-to-jsx-string@14.3.4
+npm WARN   node_modules/@storybook/react/node_modules/react-element-to-jsx-string
+npm WARN     react-element-to-jsx-string@"^14.3.4" from @storybook/react@6.5.16
+npm WARN     node_modules/@storybook/react
+npm WARN ERESOLVE overriding peer dependency
+npm WARN While resolving: react-element-to-jsx-string@14.3.4
+npm WARN Found: react-dom@18.3.1
+npm WARN node_modules/react-dom
+npm WARN   peer react-dom@">= 16.8.6" from @design-systems/utils@2.12.0
+npm WARN   node_modules/@design-systems/utils
+npm WARN     @design-systems/utils@"2.12.0" from @devtools-ds/themes@1.2.1
+npm WARN     node_modules/@devtools-ds/themes
+npm WARN   46 more (@headlessui/react, @react-spring/web, ...)
+npm WARN 
+npm WARN Could not resolve dependency:
+npm WARN peer react-dom@"^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1" from react-element-to-jsx-string@14.3.4
+npm WARN node_modules/@storybook/react/node_modules/react-element-to-jsx-string
+npm WARN   react-element-to-jsx-string@"^14.3.4" from @storybook/react@6.5.16
+npm WARN   node_modules/@storybook/react
+npm WARN 
+npm WARN Conflicting peer dependency: react-dom@17.0.2
+npm WARN node_modules/react-dom
+npm WARN   peer react-dom@"^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1" from react-element-to-jsx-string@14.3.4
+npm WARN   node_modules/@storybook/react/node_modules/react-element-to-jsx-string
+npm WARN     react-element-to-jsx-string@"^14.3.4" from @storybook/react@6.5.16
+npm WARN     node_modules/@storybook/react
+npm WARN ERESOLVE overriding peer dependency
+npm WARN While resolving: react-reconciler@0.26.2
+npm WARN Found: react@18.3.1
+npm WARN node_modules/react
+npm WARN   peer react@">= 16.8.6" from @design-systems/utils@2.12.0
+npm WARN   node_modules/@design-systems/utils
+npm WARN     @design-systems/utils@"2.12.0" from @devtools-ds/themes@1.2.1
+npm WARN     node_modules/@devtools-ds/themes
+npm WARN   63 more (@devtools-ds/object-inspector, @devtools-ds/themes, ...)
+npm WARN 
+npm WARN Could not resolve dependency:
+npm WARN peer react@"^17.0.2" from react-reconciler@0.26.2
+npm WARN node_modules/ink/node_modules/react-reconciler
+npm WARN   react-reconciler@"^0.26.2" from ink@3.2.0
+npm WARN   node_modules/ink
+npm WARN 
+npm WARN Conflicting peer dependency: react@17.0.2
+npm WARN node_modules/react
+npm WARN   peer react@"^17.0.2" from react-reconciler@0.26.2
+npm WARN   node_modules/ink/node_modules/react-reconciler
+npm WARN     react-reconciler@"^0.26.2" from ink@3.2.0
+npm WARN     node_modules/ink
+npm ERR! code ETARGET
+npm ERR! notarget No matching version found for @storybook/react-webpack5@6.5.13.
+npm ERR! notarget In most cases you or one of your dependencies are requesting
+npm ERR! notarget a package version that doesn't exist.
+
+npm ERR! A complete log of this run can be found in: C:\Users\impud\AppData\Local\npm-cache\_logs\2024-05-11T13_33_22_273Z-debug-0.log
